@@ -6,8 +6,6 @@ x=input()
 print("¡ Muy bien!", x , "¡vamos a comenzar!")
 
 
-"""La estradas x y y corresponde al eje x y y que van a servir para comenzar
-a dibujar la caluladora"""
 turtle.screensize(500, 700)
 turtle.bgcolor("Turquoise")
 turtle.hideturtle()
@@ -29,9 +27,6 @@ turtle.forward(200)
 turtle.end_fill()
 turtle.penup()
 
-"""el siguiente procedimiento dibuja la pantalla de la calculadora"""
-
-
 def Pantalla():
     turtle.goto(180, 280)
     turtle.seth(-90)
@@ -50,7 +45,6 @@ def Pantalla():
 
 Pantalla()
 
-"""Dibuja las teclas de la calculadora"""
 
 
 def Cuadros(posx, posy, texto):
@@ -117,9 +111,7 @@ print("introduzca operandos")
 
 
 def Digitos(x):
-    """Entrada: x =caracteres que representan digitos"""
-    """Lo que va a hacer esta funcion es tomar el parametro introducido
-    suendo se llama y escribirlo en la pantalla"""
+
     global z
     t = z + x
     turtle.penup()
@@ -128,13 +120,7 @@ def Digitos(x):
     z = z + x
 
 def SyR(x, y):
-    """ Entradas :
-    x es igual al simbolo de la operacion que se desea ecribir
-    y es igual a la operacion que se realiza, en este caso la funcion se
-    llama SyR por que pude ser Suma o Resta"""
-    """Lo que hace esta funcion es asignar la entrada x para que la tortuga
-    la escriba en la pantalla y asignar la entrada y a la variable global
-    operacion que sirve despues para indicar que tipo de operacion se realiza"""
+   
     global operando1
     global z
     global operacion
@@ -194,10 +180,7 @@ def obtenerxy(x, y):
         z = ""
         Pantalla()
         reinicio = "false"
-    """ la siguiente es la operacion de elevacion al cuadrado; esta requiere un poco mas
-    de cuidado para evitar que se introduzcan mas de una elevacion a la ves. Trabaja con una variable global
-    llamada permitir que es la que permite la accion de elevacion al cuadrado o no, dependiendo de que
-    se unda despues de indicar la operacion cuadrado activada al undir el simbolo ^2"""
+
     if (permitir == "false"):
         if (x > 124 and x < 180 and y > -88 and y < -32 and len(z) <= e and operacion == "cuadrado"):
             Pantalla()
@@ -296,9 +279,7 @@ def obtenerxy(x, y):
         Digitos("0")
 
 
-        """las siguientes condiciones van a realizar las operaciones
-    ya determinadas por la escritura del digito guardada en la variable
-    global operacion"""
+
     if (x > 124 and x < 180 and y > -88 and y < -32 and len(z) <= e):
         turtle.penup()
         reinicio = "true"
@@ -346,13 +327,11 @@ def obtenerxy(x, y):
                 turtle.write(operando1 * operando1 , align="left", font=("Arial", 20, "bold"))
                 
              
-
-                
+               
             z = ''
             operando1 = 0
             operando2 = 0
-
-           
+          
                  
             
 
