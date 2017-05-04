@@ -36,7 +36,7 @@ def Pantalla():
     turtle.goto(180, 280)
     turtle.seth(-90)
     turtle.pendown()
-    turtle.fillcolor("Navajo White")
+    turtle.fillcolor("White")
     turtle.begin_fill()
     turtle.forward(80)
     turtle.right(90)
@@ -54,10 +54,7 @@ Pantalla()
 
 
 def Cuadros(posx, posy, texto):
-    """Entradas:
-    posx = posicion en z
-    posy = posicion en y
-    texto = el digito que se dibuja en la tecla"""
+
     turtle.penup()
     turtle.goto(posx,posy)
     turtle.pendown()
@@ -161,13 +158,7 @@ def SyR(x, y):
     
 
 def MyD(x, y):
-    """ Entradas :
-    x es igual al simbolo de la operacion que se desea ecribir
-    y es igual a la operacion que se realiza, en este caso la funcion se
-    llama MyD por que pude ser Multiplicacion o Division"""
-    """Lo que hace esta funcion es asignar la entrada x para que la tortuga
-    la escriba en la pantalla y asignar la entrada y a la variable global
-    operacion que sirve despues para indicar que tipo de operacion se realiza"""
+    
     global operando1
     global z
     global operacion
@@ -187,8 +178,7 @@ def operar(operar):
            pass
 
 def obtenerxy(x, y):
-    """Necesitamos las variales globales para guardar lo introducido al hace click
-    en las teclas indicadas que cambias estas variables"""
+    
     global permitir
     global operando1
     global operando2
@@ -363,9 +353,7 @@ def obtenerxy(x, y):
             operando2 = 0
 
            
-            
-
-     
+                 
             
 
 
